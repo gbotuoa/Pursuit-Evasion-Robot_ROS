@@ -8,14 +8,14 @@ The following instructions will guide you to run the project in your local machi
 ### Dependencies
 
 We tested our project on the following environment.
+* Ubuntu 14.04
+* Python 2.7.6
+* Numpy
+* Matplotlib
+* OpenCV-Python 2.4.8
 
-
-```
-Ubuntu 14.04
-
-```
-
-### Installing
+### How to run
+#### Turtlebot Gazebo Simulation
 
 A step by step series of examples that tell you have to get a development env running
 
