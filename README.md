@@ -1,13 +1,14 @@
 # Project : Pursuit-Evasion Robot Using ROS-Kobuki-Turtlebot
 The project is done @uoa for experimental robotics
 
-## Getting Started
+## Overview
 
 The following instructions will guide you to run the project in your local machines.
 
-### Prerequisites
+### Dependencies
 
 We tested our project on the following environment.
+
 
 ```
 Ubuntu 14.04
