@@ -15,33 +15,57 @@ We tested our project on the following environment.
 * Matplotlib
 * OpenCV-Python 2.4.8
 
-How to configure WiFi:
+How to configure onboard RasberryPi for WiFI:
 ```
-Give the example
+ssh ubuntu@192.168.2.111
+
+
 ```
 How to configure Joy:
-Include link
-```
-Give the example
-```
+http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
 
 ### How to run 
-#### Turtlebot Gazebo Simulation
-##### Evasion
+#### Evasion
+##### Turtlebot Gazebo Simulation
 ```
-roslaunch turtlebot_bringup turtlebot_world.launch
+roslaunch turtlebot_gazebo turtlebot_world.launch
 cd catkin_ws
 source devel/setup.bash
 chmod +x fileName.py
 catkin_make
-rosrun packageName wander_sim.py 
+rosrun packageName winder_sim.py
+```
+##### Kobuki Turtlebot
+```
+roslaunch turtlebot_bringup minimal.launch
+roslaunch turtlebot_bringup 3dsensor.launch
+roslaunch packageName standalone.launch #refer standalone.launch in project files
+roslaunch turtlebot_teleop logitech.launch 
+```
+If joystick appears on js1 other than js0:
+```
+ls -l /dev/input/js1
+roslaunch packageName joy.launch #refer joy.launch in project files
+```
+```
+cd catkin_ws
+source devel/setup.bash
+chmod +x fileName.py
+catkin_make
+rosrun packageName wander.py cmd_vel:=cmd_vel/velocityramp #uses standalone.launch
 ```
 
 ##### Pursuit
-
-
-#### Kobuku Turtlebot
-##### Evasion
+##### Turtlebot Gazebo Simulation
+```
+roslaunch turtlebot_gazebo turtlebot_world.launch
+cd catkin_ws
+source devel/setup.bash
+chmod +x fileName.py
+catkin_make
+rosrun packageName follower_sim.py 
+```
+#### Kobuki Turtlebot
 ```
 roslaunch turtlebot_bringup minimal.launch
 roslaunch turtlebot_bringup 3dsensor.launch
@@ -59,7 +83,7 @@ cd catkin_ws
 source devel/setup.bash
 chmod +x fileName.py
 catkin_make
-rosrun packageName wander.py cmd_vel:=cmd_vel/velocityramp #uses standalone.launch
+rosrun packageName follower.py cmd_vel:=cmd_vel/velocityramp #uses standalone.launch
 ```
 
 ##### Pursuit
