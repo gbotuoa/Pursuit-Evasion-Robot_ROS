@@ -29,12 +29,14 @@ Give the example
 #### Turtlebot Gazebo Simulation
 ##### Evasion
 
+'''
 roslaunch turtlebot_bringup turtlebot_world.launch
 cd catkin_ws
 source devel/setup.bash
 chmod +x fileName.py
 catkin_make
 rosrun packageName wander_sim.py 
+'''
 
 ##### Pursuit
 
