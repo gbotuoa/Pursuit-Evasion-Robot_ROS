@@ -25,7 +25,7 @@ Include link
 Give the example
 ```
 
-### How to run (VT)
+### How to run 
 #### Turtlebot Gazebo Simulation
 ##### Evasion
 ```
