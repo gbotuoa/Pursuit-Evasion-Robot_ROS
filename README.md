@@ -55,7 +55,7 @@ catkin_make
 rosrun packageName wander.py cmd_vel:=cmd_vel/velocityramp #uses standalone.launch
 ```
 
-##### Pursuit
+#### Pursuit
 ##### Turtlebot Gazebo Simulation
 ```
 roslaunch turtlebot_gazebo turtlebot_world.launch
@@ -65,7 +65,7 @@ chmod +x fileName.py
 catkin_make
 rosrun packageName follower_sim.py 
 ```
-#### Kobuki Turtlebot
+##### Kobuki Turtlebot
 ```
 roslaunch turtlebot_bringup minimal.launch
 roslaunch turtlebot_bringup 3dsensor.launch
