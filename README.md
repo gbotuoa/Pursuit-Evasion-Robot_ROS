@@ -10,12 +10,57 @@ The following instructions will guide you to run the project in your local machi
 We tested our project on the following environment.
 * Ubuntu 14.04
 * Python 2.7.6
+* ROS Indigo
 * Numpy
 * Matplotlib
 * OpenCV-Python 2.4.8
 
-### How to run
+How to configure WiFi:
+```
+Give the example
+```
+How to configure Joy:
+Include link
+```
+Give the example
+```
+
+### How to run (VT)
 #### Turtlebot Gazebo Simulation
+##### Evasion
+
+roslaunch turtlebot_bringup turtlebot_world.launch
+cd catkin_ws
+source devel/setup.bash
+chmod +x fileName.py
+catkin_make
+rosrun packageName wander_sim.py 
+
+##### Pursuit
+
+
+#### Kobuku Turtlebot
+##### Evasion
+
+roslaunch turtlebot_bringup minimal.launch
+roslaunch turtlebot_bringup 3dsensor.launch
+roslaunch packageName standalone.launch #refer standalone.launch in project files
+roslaunch turtlebot_teleop logitech.launch 
+
+If joystick appears on js1 other than js0:
+ls -l /dev/input/js1
+roslaunch packageName joy.launch #refer joy.launch in project files
+
+cd catkin_ws
+source devel/setup.bash
+chmod +x fileName.py
+catkin_make
+rosrun packageName wander.py cmd_vel:=cmd_vel/velocityramp #uses standalone.launch
+
+
+##### Pursuit
+
+Document Wifi commands
 
 A step by step series of examples that tell you have to get a development env running
 
@@ -31,27 +76,11 @@ And repeat
 until finished
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## Discussion
 
-Explain how to run the system
-```
-roscore
-```
-In a new terminal
-```
-roslaunch turtlebot_bringup ..
-```
-## Deployment
+Discuss how changing p changed the output
 
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
@@ -59,16 +88,13 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Authors
 
+* **Nazmus**
 * **Vivian** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Reference 
+## Acknowledgement 
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* [Programming Robots with ROS](https://github.com/osrf/rosbook/blob/master/LICENSE)
