@@ -19,7 +19,6 @@ How to configure onboard RasberryPi for WiFI:
 ```
 ssh ubuntu@192.168.2.111
 
-
 ```
 How to configure Joy:
 http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
