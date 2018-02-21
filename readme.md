@@ -83,7 +83,7 @@ cd catkin_ws
 source devel/setup.bash
 chmod +x fileName.py
 catkin_make
-rosrun packageName follower.py cmd_vel:=cmd_vel/velocityramp #uses standalone.launch
+rosrun packageName follower_sim.py cmd_vel:=cmd_vel/velocityramp #uses standalone.launch
 ```
 
 ## Project Procedure
