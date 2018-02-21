@@ -107,6 +107,7 @@ The follower behavior can be improved with RGB image processing.Combining RGB-D 
 * **Vivian**
 ## Acknowledgement 
 
-* [1] [Programming Robots with ROS](https://github.com/osrf/rosbook/blob/master)
+* [1] [Programming Robots with ROS](https://github.com/osrf/rosbook)
 * [2] [Maximum Security Bot](http://people.cornellcollege.edu/smikell15/MAX)
+
 
