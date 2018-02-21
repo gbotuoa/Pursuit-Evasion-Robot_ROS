@@ -39,7 +39,6 @@ rosrun packageName winder_sim.py
 ```
 roslaunch turtlebot_bringup minimal.launch
 roslaunch turtlebot_bringup 3dsensor.launch
-roslaunch packageName standalone.launch #refer standalone.launch in project files
 roslaunch turtlebot_teleop logitech.launch 
 ```
 If joystick appears on js1 other than js0:
@@ -52,7 +51,7 @@ cd catkin_ws
 source devel/setup.bash
 chmod +x fileName.py
 catkin_make
-rosrun packageName wander.py cmd_vel:=cmd_vel/velocityramp #uses standalone.launch
+rosrun packageName wander.py 
 ```
 
 ### Pursuit Robot
@@ -69,7 +68,6 @@ rosrun packageName follower_sim.py
 ```
 roslaunch turtlebot_bringup minimal.launch
 roslaunch turtlebot_bringup 3dsensor.launch
-roslaunch packageName standalone.launch #refer standalone.launch in project files
 roslaunch turtlebot_teleop logitech.launch 
 ```
 
@@ -83,7 +81,7 @@ cd catkin_ws
 source devel/setup.bash
 chmod +x fileName.py
 catkin_make
-rosrun packageName follower_sim.py cmd_vel:=cmd_vel/velocityramp #uses standalone.launch
+rosrun packageName follower_sim.py 
 ```
 
 ## Project Procedure
