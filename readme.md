@@ -91,6 +91,8 @@ The evasion robot is subscribed to the scan topics. It checks the minimum value 
 
 The pursuit robot tries to follow the nearest object. It sees object at certain distance , if no object found it drives at diagonally.Whenever an object is found it maintains a safe distance.The proportionate behavior with respect to the error is calculated in terms of tanh() function.We know tanh is a zero mean function and min value and max value is 1.So we multiplied the tanh() output with our maximum speed over x direction.For angular z we took the normalized position value with respect to half the vector(320) for depth resolution 640x480.
 
+<img src ="Figure_1.png" width ="320">
+
 
 ## Discussion
 
