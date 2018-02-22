@@ -88,15 +88,14 @@ rosrun packageName follower_sim.py
 The evasion robot is subscribed to the scan topics. It checks the minimum value of the vector excluding the NaN values.If it finds something within 0.8 m it turns for a fixed time and again moves forward.If forward moving exceeds some duration it turns again.This mechanism helps escaping from the other robot. See the following video below.
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v="T3S_YELKO3I"><img src="https://img.youtube.com/vi/T3S_YELKO3I/0.jpg" alt="IMAGE ALT TEXT"></a>
+  <a href="https://www.youtube.com/watch?v=T3S_YELKO3I"><img src="https://img.youtube.com/vi/T3S_YELKO3I/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
+The pursuit robot tries to follow the nearest object. It sees object at certain distance , if no object found it drives at diagonally.Whenever an object is found it maintains a safe distance.The proportionate behavior with respect to the error is calculated in terms of tanh() function.We know tanh is a zero mean function and min value and max value is 1.So we multiplied the tanh(a*error) with our maximum speed over x direction.For angular z we took the normalized position value with respect to half the vector(320) for depth resolution 640x480.
 
-
-The pursuit robot tries to follow the nearest object. It sees object at certain distance , if no object found it drives at diagonally.Whenever an object is found it maintains a safe distance.The proportionate behavior with respect to the error is calculated in terms of tanh() function.We know tanh is a zero mean function and min value and max value is 1.So we multiplied the tanh() output with our maximum speed over x direction.For angular z we took the normalized position value with respect to half the vector(320) for depth resolution 640x480.
-
-<img src ="Figure_1.png" width ="320">
-
-
+<img src ="Figure_1.png" width ="480">
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=IdaIssUfn-w"><img src="https://img.youtube.com/vi/IdaIssUfn-w/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
 ## Discussion
 
 The pursuit robot can not differentiate between a static object and a moving boject. It always follows the distance nearest to it and hence often get stuck at the walls or starts follwing other moving oject nearest to it.Sometimes if the evasion robot is too close it sees it as blank as the sensor readings are NaN which are discarded.Velocity ramp discussed in [1] is used.
@@ -112,5 +111,3 @@ The follower behavior can be improved with RGB image processing.Combining RGB-D 
 
 * [1] [Programming Robots with ROS](https://github.com/osrf/rosbook)
 * [2] [Maximum Security Bot](http://people.cornellcollege.edu/smikell15/MAX)
-
-
