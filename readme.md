@@ -84,8 +84,13 @@ catkin_make
 rosrun packageName follower_sim.py 
 ```
 
-## Project Procedure
+## Project Description
 The evasion robot is subscribed to the scan topics. It checks the minimum value of the vector excluding the NaN values.If it finds something within 0.8 m it turns for a fixed time and again moves forward.If forward moving exceeds some duration it turns again.This mechanism helps escaping from the other robot. See the following video below.
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v="T3S_YELKO3I"><img src="https://img.youtube.com/vi/T3S_YELKO3I/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
+
 
 The pursuit robot tries to follow the nearest object. It sees object at certain distance , if no object found it drives at diagonally.Whenever an object is found it maintains a safe distance.The proportionate behavior with respect to the error is calculated in terms of tanh() function.We know tanh is a zero mean function and min value and max value is 1.So we multiplied the tanh() output with our maximum speed over x direction.For angular z we took the normalized position value with respect to half the vector(320) for depth resolution 640x480.
 
