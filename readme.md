@@ -98,6 +98,7 @@ The pursuit robot tries to follow the nearest object. It sees object at certain 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=IdaIssUfn-w"><img src="https://img.youtube.com/vi/IdaIssUfn-w/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
+
 ## Discussion
 
 The pursuit robot can not differentiate between a static object and a moving boject. It always follows the distance nearest to it.Hence often gets stuck at the walls or starts following other moving oject nearest to it.Sometimes if the evasion robot is too close it sees it as blank as the sensor readings are discarded NaN values.Velocity ramp discussed in [1] is used.
