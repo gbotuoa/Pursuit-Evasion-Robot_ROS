@@ -92,7 +92,9 @@ The evasion robot is subscribed to the "scan" topics. It checks the minimum valu
 </div>
 The pursuit robot tries to follow the nearest object. It sees object at certain distance , if no object found it drives diagonally.Whenever an object is found it maintains a safe distance.If the object tries to come close , it back up.The proportionate behavior with respect to the error is calculated in terms of hyperbolic function ,tanh(a*error).We know tanh is a zero mean function, min value and max value is -1 and 1 respectively.The trigonometric and hyperbolic relation is tan(ax)=atanh(x).So we multiplied the tanh(a*error) with our maximum speed for robot's linear x direction.This velocity is bounded over any range of the error.For angular z we took the normalized position value with respect to half the scan vector(320) for depth resolution of 640x480.
 
-<img src ="Figure_1.png" width ="480">
+<div align="center">
+  <img src ="Figure_1.png" width ="480">
+</div>
 <div align="center">
   <a href="https://www.youtube.com/watch?v=IdaIssUfn-w"><img src="https://img.youtube.com/vi/IdaIssUfn-w/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
