@@ -15,12 +15,18 @@ We tested our project on the following environment
 * Matplotlib
 * OpenCV-Python 2.4.8
 
-How to configure onboard RasberryPi for WiFI:
+How to configure onboard RasberryPi for WiFI control:
+Connect to a local network then connect to a Turtlebot by following the commands below
 ```
-ssh ubuntu@192.168.2.111
-
-
+ssh ubuntu@192.168.2.11X #source into a Turtlebot
+screen
+roscore
+source scripts/ROS_mater.txt #in a new screen (ctrl-a c) source to setup ROSMASTER and ROSHOSTNAME IP address
+roslaunch turtlebot_bringup minimal.launch
+source scripts/ROS_hostname.txt #source to complete setup of ROSMASTER and ROSHOSTNAME
+roslaunch turtlebot_teleop keyboard_teleop.launch #Test with control via keyboard
 ```
+
 How to configure Joy:
 http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
 
