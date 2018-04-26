@@ -116,7 +116,7 @@ The follower behavior can be improved with RGB image processing. Combining RGB-D
 ## Authors
 
 * [Nazmus Sakib](https://github.com/nsa31)
-* **Vivian**
+* [Vivian Ting](https://github.com/jtuoa)
 ## Acknowledgement 
 
 * [1] [Programming Robots with ROS](https://github.com/osrf/rosbook)
